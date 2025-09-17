@@ -1,2 +1,13 @@
 <app-header></app-header>
+
+<section class="products">
+  @for (product of products; track product.id) {
+    <app-products-card [product]="product"></app-products-card>
+  }
+  @empty {
+    <p>No hay productos disponibles en este momento.</p>
+  }
+</section>
+
 <app-footer></app-footer>
+

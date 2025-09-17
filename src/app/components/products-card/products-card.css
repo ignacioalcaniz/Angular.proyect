@@ -1,0 +1,24 @@
+.card{
+      border: 2px solid black ;
+    border-radius: 10px;
+    padding: 10px;
+    contain: content;
+    gap: 10px;
+   justify-items: center;
+    
+}
+img{
+    width: 50%;
+    height: 200px;
+    display: flex;
+   
+}
+.detalle{
+  background-color: orange;
+}
+button{
+  background-color: green;
+  border-radius: 10px;
+  display: flex;
+  margin: 10px;
+}

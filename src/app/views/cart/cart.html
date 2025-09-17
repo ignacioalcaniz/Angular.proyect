@@ -1,3 +1,24 @@
-<h1>Carrito</h1>
+
 <app-header></app-header>
+<h2>Carrito de compras</h2>
+
+@for (item of cart; track item.id) {
+  <div class="cart-item">
+    <img [src]="item.image" [alt]="item.name" width="100" />
+    <div>
+      <h3>{{ item.name }}</h3>
+      <p>Precio: {{ item.price | currency:'ARS' }}</p>
+      <p>Cantidad: {{ item.quantity }}</p>
+    </div>
+    <button (click)="remove(item.id)">❌ Quitar</button>
+  </div>
+} @empty {
+  <p>Tu carrito está vacío 🛒</p>
+}
+
+<hr />
+<p><strong>Total:</strong> {{ total | currency:'ARS' }}</p>
+<button (click)="clear()">Vaciar carrito</button>
+<button (click)="checkout()">Finalizar compra</button>
+
 <app-footer></app-footer>
