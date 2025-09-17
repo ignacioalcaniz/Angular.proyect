@@ -1,7 +1,7 @@
 
 <app-header></app-header>
 <h2>Carrito de compras</h2>
-
+<div class="cart-container">
 @for (item of cart; track item.id) {
   <div class="cart-item">
     <img [src]="item.image" [alt]="item.name" width="100" />
@@ -20,5 +20,6 @@
 <p><strong>Total:</strong> {{ total | currency:'ARS' }}</p>
 <button (click)="clear()">Vaciar carrito</button>
 <button (click)="checkout()">Finalizar compra</button>
+</div>
 
 <app-footer></app-footer>

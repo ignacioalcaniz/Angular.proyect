@@ -34,3 +34,6 @@ button:disabled {
   color: red;
   font-size: 12px;
 }
+h2{
+    text-align: center;
+}
